@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tasin">
+    <meta name="description" content="A portfolio made by and for Tasin">
+    <title>Portfolio</title>
+    <style>
+
+      .abstract-backdrop {
+        position: fixed;
+        top: 30%;
+        right: -10%;
+        width: 60vw;
+        height: 60vw;
+        background: radial-gradient(circle, rgba(89, 46, 46, 0.41568627450980394) 0%, rgba(0, 0, 0, 0) 70%);
+        border: 1px dashed rgba(84, 84, 84, 0.41568627450980394);
+        border-radius: 43% 57% 70% 30% / 45% 45% 55% 55%;
+        animation: organicMorph 20s infinite alternate linear;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .abstract-backdrop2 {
+        position: fixed;
+        bottom: 10%;
+        left: 5%;
+        width: 60vw;
+        height: 60vw;
+        background: radial-gradient(circle, rgba(31, 31, 31, 0.41568627450980394) 0%, rgba(0,0,0,0) 70%);
+        border: 1px dashed rgba(84, 84, 84, 0.41568627450980394);
+        border-radius: 43% 57% 70% 30% / 45% 45% 55% 55%;
+        animation: organicMorph 20s infinite alternate linear;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .abstract-backdrop3 {
+        position: fixed;
+        top: 5%;
+        left: -10%;
+        width: 60vw;
+        height: 60vw;
+        background: radial-gradient(circle, rgba(84, 84, 84, 0.41568627450980394) 0%, rgba(0,0,0,0) 70%);
+        border: 1px dashed rgba(84, 84, 84, 0.41568627450980394);
+        border-radius: 43% 57% 70% 30% / 45% 45% 55% 55%;
+        animation: organicMorph 20s infinite alternate linear;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      @keyframes organicMorph {
+        0% { border-radius: 43% 57% 70% 30% / 45% 45% 55% 55%; transform: rotate(0deg); }
+        50% { border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%; }
+        100% { border-radius: 50% 50% 30% 70% / 30% 60% 40% 70%; transform: rotate(360deg); }
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+      }
+
+      body {
+        background-color: grey;
+        position: relative;
+        line-height: 1.6; 
+        overflow-x: hidden;
+      }
+      
+      h2 {
+        color: grey;  
+      }
+
+      header {
+        
+        background: #333;
+        align-items: center;
+        display: flex;
+        float: none ;
+        justify-content: space-between;  
+        padding: .5rem;
+        color: white;
+        border-radius: 1px;
+        position: sticky;
+        
+        z-index: 100;
+        top: 0;
+        
+      }
+      .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        list-style: none;
+        
+        
+        
+        }
+      .nav-links a {
+        color: hwb(0 73% 27%);
+        text-decoration: none;
+        font-family: fantasy;
+        font-weight: bold;
+        font-size: 14px;
+        }
+      .nav-links a:hover {
+        color: #4CAF50
+        }
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        position: relative;
+        z-index: 2;
+        }
+
+      .intro {
+        padding: 5rem 0;
+        border-bottom: 1px solid hwb(0 73% 27% / 0.27058823529411763);        
+        }
+
+      .intro h1 {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        letter-spacing: -1px;
+      
+      }
+
+      .intro h1 span {
+        color: hwb(30 18% 74%);
+        display: block;
+        }
+
+      .intro p {
+        max-width: 450px;
+        color: hwb(30 18% 74%);
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+      
+      .hero, .hero1, .hero2 {
+        padding: 8rem 0;
+        border-bottom: 1px solid #bababa45;
+      }
+      
+      .card {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-family: fantasy;
+      }
+      
+      .card1 {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #585858c4;
+        
+        }
+
+      .card1 p {
+        color: hwb(0 12% 88%);
+      }
+
+      .card1 p img {
+        padding: 5px 5px;
+        display: block;
+        border-radius: 43% 57% 70% 30% / 45% 45% 55% 55%;
+        zoom: 150%;
+      }
+
+      .card1 p span {
+        color:  #7d1717b2;
+        font-weight: bold;
+        }
+
+      h3 {
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        align-items: center;
+        color: #bcbcbc
+        
+      }
+      .card3 h3, .card4 h3{
+
+        color: #cfcfc6;
+        
+      }
+
+     
+      h3::before {
+        content: "";
+        display: inline-block;
+        width: 70px;
+        height: 1px;
+        background: #bababa;           
+        margin-right: 12px;
+      }
+     
+      .card2 {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #585858c4;
+       }
+      .card3 {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #adad94c4;
+        }
+      .card4 {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #adad94c4;
+      }
+      .card5 {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #929292c4;
+      }
+      .card6 {
+        
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #929292c4;
+               
+      }
+
+      .card6 p a:link {
+        color: #348fbb;
+      }
+      .card6 p a:visited {
+        color: #c4b5fd;
+      }
+      
+      footer {
+        padding: 4rem 2rem;
+        text-align: center;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        font-family: 'Courier New', Courier, monospace;
+      }
+    </style>
+  </head>
+  
+  <body>
+
+    <div class="abstract-backdrop"></div>
+    <div class="abstract-backdrop2"></div>
+    <div class="abstract-backdrop3"></div>
+    <header>
+    
+      
+      <div class="logo">
+        <h2>Port<span style="color:hwb(0 37% 29%);">Fo</span><span style="color:hwb(0 20% 37%);">Lio</span></h2>
+      </div> 
+     
+      <nav class="nav-links">
+        
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#works">Works</a>
+            <a href="#contact">Contact</a>
+            
+      </nav>
+      
+    
+    </header>  
+    
+    <br>
+   
+    <main>
+
+    <section id="home" class="intro" oncontextmenu="return false">
+      <h1>
+        H. Almas Tasin <br>
+        <span> an undefeated persona</span>
+      </h1>
+      <p> An interactive space showcasing my sick-ass sins I've recently done in my pitiful life. </p>
+
+    </section>
+      
+    <section id="about" class="hero"  oncontextmenu="return false">
+
+     
+    <div class=" card card1">
+      <h3>
+        introduction
+      </h3>
+      <p> Extremely Classified Information <img width="150" height="150"  src="myprofile.jpg" alt="Photo of Tasin">
+      I'm <span> H. Almas Tasin, <br>
+      CEO </span> of nothing, <br>
+      Nowhere. <br>
+      Currently living away from home, to achieve some sick-ass greatness to fulfill my wishes.
+      </p>
+    </div>
+    
+
+    <br>
+      
+     
+    <div class="card card2">
+      <h3>
+        More 
+      </h3>
+      <p>Ami bolbona, amar shorom kore. </p>
+    </div> 
+    
+    </section> <hr color="silver">
+     
+      <br>
+
+    <section id="works" class="hero1"  oncontextmenu="return false">
+
+     
+    <div class="card card3">
+      <h3>
+        Crazy-ass works
+      </h3>
+      <p>
+        ✓ Learning how to <span style="color: indianred;"> Code 🧑🏻‍💻</span> <br>
+        ✓ Trying to be better at using <span style="color: indianred;"> Ai 📱</span> <br>
+        ✓ Working out to make <span style="color: indianred;"> Muscles 💪🏻</span> <br>
+        ✓ Using my sick-ass <span style="color: indianred;"> Brain 🧠 </span> <br>
+        ✓ Trying to live a peaceful <span style="color: indianred;"> Life 🤷🏻 </span> <br>      
+      </p>
+      
+    </div> 
+      
+      <br>
+     
+    <div class="card card4">
+      <h3>
+        More
+      </h3>
+      <p>
+        Why are you here? Wanna know my schedule - when I eat when I p**p? <br>
+        Just go away. Go live your sick-ass life. Go...
+      </p>
+    </div>
+      
+    </section>
+      
+      <hr>
+
+    <section id="contact" class="hero2"  oncontextmenu="return false">
+
+     
+    <div class="card card5">
+      <h3>
+        My Contact
+      </h3>
+      <p>
+        You want to contact me? Oh my goodness! Fr you want my contact? <br>
+        Then just find me and call me by my name, <br>
+        You <span style="color: darkred;"> lazy-ass nonsense</span>. <br>
+      </p>
+    </div> 
+      
+      <br>
+     
+    <div class="card card6">
+      <h3>
+        Conclusion      </h3>
+      <p>
+        Btw, contact me here: <br>
+        <a style="text-decoration:none;" href="https://github.com/Tasin-Void">My Github</a> <br>
+        Let me know how do  you <br> like my Portfolio 😉
+      </p>
+    </div>    
+      
+    </section>
+
+    <footer  oncontextmenu="return false">
+        © 2026 // Ta Ta Bye Bye
+    </footer>
+
+    </main>
+  </body>
+</html>
